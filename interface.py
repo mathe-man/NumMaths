@@ -14,7 +14,7 @@ def space(size: int = 1) -> None:
         print()
 
 
-def getkey() -> str:
+def get_key() -> str:
     return input()[0]
 
 
@@ -24,14 +24,14 @@ def choose(options) -> int:
 
     print("> ", end="")
 
-    answer = getkey()
+    answer = get_key()
     jump = not answer.isdigit()
 
     while not jump:
         print("Answer is invalide: " + answer)
         print("Retry")
         print("> ", end="")
-        answer = getkey()
+        answer = get_key()
 
         # Get out of the while loop when the answer is a digit and in the range of the choices
         if answer.isdigit():
@@ -40,3 +40,16 @@ def choose(options) -> int:
 
 
     return int(answer)
+
+def get_floats(vars):
+    answers = []
+    for i in range(len(vars)):
+        try:
+            answer = float(input("<" + vars[i] + "> :"))
+            answers.append(answer)
+
+        except ValueError:  # Catch convertion error => answer not float
+            print("Incorrect ×")
+            i -= 1  # Decrement i to retry
+
+    return answers
