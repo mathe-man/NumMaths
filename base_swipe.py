@@ -1,6 +1,6 @@
 
-#TODO add security checks (no inputs greater than his base, ...)
 def base_swipe(in_base_size: int, out_base_size, inputs):
+    # TODO add security checks (no inputs greater than his base, ...)
 
     total = 0
     for i in range(len(inputs)):
