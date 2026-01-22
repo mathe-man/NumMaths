@@ -13,7 +13,7 @@ def main():
 
 def debug():
     print(" == DEBUG == ")
-    print(choose(["mon caca", "ton pipi"]))
+    print(choose(["Option 1", "Option 2"]))
 
 
 
